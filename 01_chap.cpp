@@ -15,18 +15,18 @@ class SinglePieceMode
 		{
 			if ( NULL == s_minstance)
 			{
-				s_minstance = new SinglePieceMode;
-				if (NULL == s_minstance)
+				sm_instance = new SinglePieceMode;
+				if (NULL == sm_instance)
 				{
 					return NULL;					//创建失败
 				}
 			}
-			return  s_minstance;
+			return  sm_instance;
 		}
 		
 	int m_i;
 };
-SinglePieceMode * SinglePieceMode::s_minstance = NULL;
+SinglePieceMode * SinglePieceMode::sm_instance = NULL;
 
 
 int main()
